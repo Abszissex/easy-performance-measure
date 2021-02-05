@@ -1,26 +1,32 @@
-# medium-website-crawling
+# easy-performance-measure
 
-Simple example code to crawl a certain website for specific HTML elements and get their value
+## How to use
 
-#### Getting started
+```typescript
+import {measureSync, measureAsync} from 'easy-performance-measure';
+
+const syncFn = (a:string, b:number) :string=> `${a}: ${b}`;
+const asyncFn = async (a:string, b:number): Promise<string> => {
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(result(a, b));
+        }, 250);
+    });
+};
+
+const main = async (): Promise<void>=>{
+    // Example for synchronous method
+    const resultSync: [string, number] = measureSync<string, [string, number]>(syncFn, 'First', 5);
+    console.log(resultSync); // Output: [ 'First: 5', 0 ]
+
+    // Example for asynchronous method
+    const resultAsync: [string, number] = await measureAsync<string, [string, number]>(asyncFn, 'First', 5);
+    console.log(resultAsync); // Output: [ 'First: 5', 255 ]
+};
+
+main();
+
+
+
 
 ```
-### Install all modules
-npm install
-
-### Start crawling
-npm run dev
-```
-
-#### NPM Commands
-
-Using the below command substituting `XXX` in `npm run XXX`.
-
-| Command         | Effect        |
-| -------------   | ------------- | 
-| `clean`         | Delete `dist` folder | 
-| `build`         | Trigger a clean build | 
-| `start`         | Start the program using the output from `npm run build` ( -> `dist/index.js`)      |
-| `dev`           | Directly start the program via the TypeScript files, without transpiling, using `ts-node-dev` |
-| `lint`          | Run `eslint` on all TypeScript files under `src`      |
-| `lint:write`    | Run `eslint` and fix all TypeScript files under `src`      | 

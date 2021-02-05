@@ -3,7 +3,8 @@
     "strict": true,
     "resolveJsonModule": true,
     "outDir": "dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "declaration": true
   },
   "exclude": [
     "**/*.spec.ts"

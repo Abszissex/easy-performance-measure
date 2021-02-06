@@ -5,8 +5,8 @@
 ```typescript
 import {measureSync, measureAsync} from 'easy-performance-measure';
 
-const syncFn = (a:string, b:number) :string=> `${a}: ${b}`;
-const asyncFn = async (a:string, b:number): Promise<string> => {
+const syncFn = (a:string, b:number) : string=> `${a}: ${b}`;
+const asyncFn = async (a:string, b:number) : Promise<string> => {
     return new Promise((resolve)=>{
         setTimeout(()=>{
             resolve(result(a, b));
@@ -14,7 +14,7 @@ const asyncFn = async (a:string, b:number): Promise<string> => {
     });
 };
 
-const main = async (): Promise<void>=>{
+const main = async () : Promise<void>=>{
     // Example for synchronous method
     const resultSync: [string, number] = measureSync<string, [string, number]>(syncFn, 'First', 5);
     console.log(resultSync); // Output: [ 'First: 5', 0 ]

@@ -1,5 +1,7 @@
 # easy-performance-measure
 
+Tiny helper package without dependencies to measure the performance of methods. 
+
 ## How to use
 
 ```typescript

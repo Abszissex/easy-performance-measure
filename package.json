@@ -36,5 +36,9 @@
   "homepage": "https://abszissex.medium.com/",
   "bugs": {
     "url": "https://github.com/Abszissex/easy-performance-measure/issues"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Abszissex/easy-performance-measure.git"
   }
 }

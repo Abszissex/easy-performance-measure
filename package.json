@@ -1,8 +1,11 @@
 {
   "name": "easy-performance-measure",
-  "version": "1.0.0",
-  "description": "Super small wrapper methods for testing the performance of methods",
-  "keywords": ["performance", "measure"],
+  "version": "1.0.1",
+  "description": "Tiny helper package without dependencies to measure the performance of methods",
+  "keywords": [
+    "performance",
+    "measure"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "easy-performance-measure",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tiny helper package without dependencies to measure the performance of methods",
   "keywords": [
     "performance",
@@ -38,7 +38,7 @@
     "url": "https://github.com/Abszissex/easy-performance-measure/issues"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Abszissex/easy-performance-measure.git"
+    "type": "git",
+    "url": "https://github.com/Abszissex/easy-performance-measure.git"
   }
 }
